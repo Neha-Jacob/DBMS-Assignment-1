@@ -5,29 +5,82 @@
   <title> Biodata/CV</title>
 </head>
 <body>
-  <h1> <center> Biodata/CV </center> </h1>
+  <center><h1>  BIODATA/CV  </h1></center>
   <hr><hr><br>
+
   <section id="navigation">Click the function u want to do<br><br>
-    <a href="#enter details"> --> Enter details </a><br>
-    <a href="#search"> --> Search by roll number </a><br><br><hr><br>
-  <section id="enter details"><u>ENTER THE FOLLOWING DETAILS</u><br>
-    Name: <br>
-    Roll Number: <br>
-    Date of brith: <br>
-    Address: <br>
-    Mobile number: <br>
-    Email Id: <br>
-    Current Semester: <br>
-    SGPA: <br>
-    CGPA: <br>
-    Hobbies: <br>
-    Hosteller or Day Scholar? <br>
-    References if any: <br>
-  </section><br><hr><br>
-  <section id="search"><u>Search by roll number</u><br>
-    Enter roll number to be searched: <br>
+    --><a href="#enterdetails">Enter details </a><br>
+--><a href="#search">Search by roll number </a>
   </section>
-  <br><hr><br>
-  <section id="redirect"> To go back on top <a href="#navigation"> click here </section>
+    <br><br>
+    <hr>
+    <br>
+
+  <section id="enterdetails"><u>ENTER THE FOLLOWING DETAILS</u><br><br>
+    <form action="/list.php" id="details">
+
+      <label for="name">Name: </label>
+      <input type="text" id="name" name="name"><br><br>
+
+      <label for="roll">Roll number: </label>
+      <input type="text" id="roll" name="roll"><br><br>
+
+      <label for="dob">Date of brith: </label>
+      <input type="date" id="dob" name="dob" max="2005-01-01"><br><br>
+
+      Address: <div>
+        <textarea name="address" rows="4" form="details">Type&nbsp;here&nbsp;...</textarea>
+      </div><br>
+
+      <label for="contact">Mobile number(without +): </label>
+      <input type="number" id="contact" name="contact"><br><br>
+
+      <label for="email">Email Id: </label>
+      <input type="email" id="email" name="email"><br><br>
+
+      <label for="semno">Current Semester: </label>
+      <input type="number" id="semno" name="semno" min="1" max="10"><br><br>
+
+      <section id="sgpas">
+        <label for="sgpa">SGPA: </label>
+        <input type="number" id="sgpa" name="sgpa" min="0.00" max="10.00" step="0.01">
+      </section><br>
+
+      <label for="cgpa">CGPA: </label>
+      <input type="number" id="cgpa" name="cgpa" min="0.00" max="10.00" step="0.01"><br><br>
+
+      Hobbies: <div>
+        <textarea name="hobbies" rows="4" form="details">Type&nbsp;here&nbsp;...</textarea>
+      </div><br>
+
+      <label for="stay">Hosteller or Day Scholar? </label><br>
+      <input type="radio" id="hostel" name="stay" value="hostel"><label for="hostel">Hosteller</label><br>
+      <input type="radio" id="dayscholar" name="stay" value="dayscholar"><label for="dayscholar">Day Scholar</label>
+      <br><br>
+
+      References: <div>
+        <textarea name="references" rows="5" form="details">Type&nbsp;here&nbsp;...</textarea>
+      </div><br>
+
+      <input type="submit" value="Submit"> <input type="reset">
+
+    </form>
+
+  </section>
+  <br>
+  <hr>
+  <br>
+
+  <section id="search"><u>SEARCH BY ROLL NUMBER</u><br><br>
+    <form id="/list.php">
+      <labelfor="rollnosearch">Enter roll number to be searched: </label><input type="search" id="rollnosearch" name="rollnosearch"> <input type="submit" value="Submit">
+      <!--<label for="search"> Search</label> <input type="search" id-"search" name="search">-->
+   </form><br>
+  </section>
+  <br>
+  <hr>
+  <br>
+
+  <section id="redirect"><center>You have reached the end of the page. <br>To go back on top <a href="#navigation"> click here</a><br>Thank You</center> </section>
 </body>
 </html>
